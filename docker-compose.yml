@@ -1,0 +1,12 @@
+version: '3'
+
+services: 
+  terraform:
+    image: hashicorp/terraform:full
+    tty: true
+    env_file: 
+      - .env
+    volumes: 
+      - ./terraform:/app/terraform
+    working_dir: /app/terraform
+    # entrypoint: bash
